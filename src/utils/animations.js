@@ -1,14 +1,14 @@
 //Moving text Animation
 export function displayText(index, text, ref) {
-  ref.current.textContent = text.slice(0, index);
+  if (ref.current) ref.current.textContent = text.slice(0, index);
 }
 
 export function scaleText(ref) {
-  ref.current.style.transform = "scale(1.4)";
+  if (ref.current) ref.current.style.transform = "scale(1.4)";
 }
 
 export function resetText(ref) {
-  ref.current.style.transform = "scale(1)";
+  if (ref.current) ref.current.style.transform = "scale(1)";
 }
 
 export function startMovingTextAnimation(ref, text) {

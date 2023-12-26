@@ -14,7 +14,7 @@ const Banner = ({ image, title = "", children }) => {
   return (
     <div
       style={{
-        backgroundImage: `url(${image.src})`,
+        backgroundImage: `url(${image})`,
         width: "100vw",
         height: "80vh",
         display: "flex",

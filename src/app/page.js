@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import HomeBanner from "../../public/assets/HomeBanner.svg";
 import Banner from "@/components/Banner";
 import { poppins } from "./fonts";
 import { getProducts } from "@/lib/Products";
@@ -11,7 +10,7 @@ export default async function Home() {
   const products = await getProducts();
   return (
     <main className={poppins.className}>
-      <Banner image={HomeBanner} title="Logo Electronics">
+      <Banner image="/assets/HomeBanner.svg" title="Logo Electronics">
         <div className={styles.bannerContent}>
           <hr className={styles.bannerLine} />
           <p>THE TECHIES YOU LOVE</p>

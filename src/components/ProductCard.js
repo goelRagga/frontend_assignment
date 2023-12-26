@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Heart from "../../public/assets/Heart.svg";
 import styles from "../app/page.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +9,7 @@ const ProductCard = ({ data, key }) => {
     <div key={key} className={styles.productCard}>
       <div className={styles.productCardHeader}>
         <span className={styles.goldenChip}>Random</span>
-        <Image src={Heart} width={30} height={30} alt="Favourite" />
+        <Image src="/assets/Heart.svg" width={30} height={30} alt="Favourite" />
       </div>
       <div className={styles.productCardContent}>
         <Image
