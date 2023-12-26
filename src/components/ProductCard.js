@@ -19,12 +19,19 @@ const ProductCard = ({ data, key }) => {
           height={80}
           alt="Thumbnail"
         />
-        <div className={styles.productDetails}>
-          {data.title}
-          <Link href={`/products/${data.id}`}>
-            <button className={styles.pinkButton}>View</button>
-          </Link>
-        </div>
+        <div className={styles.productDetails}>{data.title}</div>
+        <Link href={`/products/${data.id}`}>
+          <button className={styles.pinkButton}>
+            <span className={styles.pinkButtonText}>View</span>
+            <Image
+              className={styles.arrowBlack}
+              src="/assets/ArrowBlack.svg"
+              width={30}
+              height={30}
+              alt="Arrow"
+            />
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -62,9 +62,12 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-
   line-height: normal;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-content: center;
   /* Styles */
   border-radius: 32px;
   border: 5px solid var(--pink);
@@ -77,6 +80,13 @@
   background: var(--text-gradient-pink);
 }
 
+.arrow {
+  transition: transform 0.5s ease;
+}
+
+.viewAllbutton:hover .arrow {
+  transform: translateX(-800%);
+}
 /* Products */
 
 .productsContainer {
@@ -115,16 +125,17 @@
 }
 
 .productImage {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
 }
 .productImage:hover {
-  transform: scale(1.8);
+  transform: scale(1.5) translateY(60%);
 }
 .productDetails {
   transition: opacity 0.3s ease-in-out;
-  opacity: 1;
 }
-.productImage:hover .productDetails {
+.productImage:hover ~ a,
+.productImage:hover ~ div {
   opacity: 0;
 }
 
@@ -154,4 +165,82 @@
   border-radius: 50px;
   font-weight: 800;
   font-family: Poppins;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowBlack {
+  transition: transform 0.5s ease;
+}
+
+.pinkButtonText {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.pinkButton:hover .arrowBlack {
+  transform: translateX(-300%);
+}
+
+.pinkButton:hover .pinkButtonText {
+  opacity: 0;
+}
+/* Footer */
+
+.footerContainer {
+  background-image: url("/assets/FooterBG.svg");
+  height: 55vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+  padding-left: 120px;
+  align-items: end;
+  padding-bottom: 10px;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.footerContentHeader {
+  background: var(--text-gradient-pink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footerContent {
+  width: 50%;
+}
+
+.footerSection ul {
+  list-style-type: none;
+}
+
+.footerSection ul li {
+  margin-bottom: 10px;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .footerContainer {
+    height: 80vh;
+    width: 100vw;
+
+    padding-left: 120px;
+
+    padding-bottom: 10px;
+  }
 }
