@@ -234,6 +234,45 @@
   align-items: center;
 }
 
+/* 
+Carousel Product Card */
+
+.carouselProductCard {
+  width: 250px;
+  height: 335px;
+  flex-shrink: 0;
+  border: 5px solid var(--GoldBorder);
+  background: #d9d9d9;
+  padding: 10px;
+}
+
+.carouselProductCardDetails {
+  color: var(--black);
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+}
+.carouselContainerChild1 {
+  width: 25%;
+}
+.carouselContainerChild2 {
+  width: 75%;
+  position: absolute;
+  right: 0px;
+  top: -70px;
+}
+.carousel {
+  top: -20px;
+}
+.carouselSlide {
+  margin: 0 50px;
+}
+
+.productsContainerhomePage {
+  margin-top: 50vh;
+}
 @media only screen and (max-width: 600px) {
   .footerContainer {
     height: 80vh;

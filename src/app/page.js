@@ -6,6 +6,8 @@ import { getProducts } from "@/lib/Products";
 import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import CarouselProductCard from "@/components/CarouselProductCard";
+import Carousel from "@/components/Carousel";
 
 export default async function Home() {
   const products = await getProducts();
@@ -30,10 +32,20 @@ export default async function Home() {
           </button>
         </Link>
       </Banner>
-      <div className={styles.productsList}>
-        {products.slice(0, 8).map((obj, index) => {
-          return <ProductCard data={obj} key={index} />;
-        })}
+
+      <div className={styles.carouselContainer}>
+        <div className={styles.carouselContainerChild1}></div>
+        <div className={styles.carouselContainerChild2}>
+          <Carousel products={products} />
+        </div>
+      </div>
+      <div className={styles.productsContainerhomePage}>
+        <h4 className={styles.bannerTitle}>Products</h4>
+        <div className={styles.productsList}>
+          {products.slice(0, 8).map((obj, index) => {
+            return <ProductCard data={obj} key={index} />;
+          })}
+        </div>
       </div>
     </main>
   );
