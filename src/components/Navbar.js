@@ -12,7 +12,7 @@ const Navbar = ({}) => {
   return (
     <div className={styles.navbarContainer}>
       <Image
-        src="/assets/Logo.svg"
+        src="/assets/LOGO.svg"
         width={100}
         height={100}
         alt="Navbar Logo"
