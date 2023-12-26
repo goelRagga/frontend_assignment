@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { NextFunctionComponent } from "next";
+
 import Image from "next/image";
 import Logo from "../../public/assets/Logo.svg";
 import styles from "../app/page.module.css";
