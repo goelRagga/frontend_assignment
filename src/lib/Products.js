@@ -13,3 +13,22 @@ export const getProductById = async (id) => {
   const product = await data.json();
   return product;
 };
+
+export const getProductCategories = async () => {
+  const data = await fetch(`https://dummyjson.com/products/categories`, {
+    cache: "no-store",
+  });
+  const product = await data.json();
+  return product;
+};
+
+export const getProductByCategory = async (category) => {
+  const data = await fetch(
+    `https://dummyjson.com/products/category/${category}`,
+    {
+      cache: "no-store",
+    }
+  );
+  const product = await data.json();
+  return product;
+};

@@ -245,6 +245,14 @@ Carousel Product Card */
   background: #d9d9d9;
   padding: 10px;
 }
+.carouselProductDetailsCard {
+  width: 150px;
+  height: 200px;
+  flex-shrink: 0;
+  border: 5px solid var(--GoldBorder);
+  background: #d9d9d9;
+  padding: 10px;
+}
 
 .carouselProductCardDetails {
   color: var(--black);
@@ -266,6 +274,11 @@ Carousel Product Card */
 .carousel {
   top: -20px;
 }
+
+.carouselProductDetails {
+  margin: 30px;
+  margin-top: 40px;
+}
 .carouselSlide {
   margin: 0 50px;
 }
@@ -273,6 +286,31 @@ Carousel Product Card */
 .productsContainerhomePage {
   margin-top: 50vh;
 }
+
+.filterBarContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filterBarDropdown {
+  width: 250px;
+  height: 68.623px;
+  flex-shrink: 0;
+  text-align: center;
+
+  border-radius: 52.579px;
+  border: 1.643px solid var(--pink);
+  background: #f2f2f2;
+  font-family: Poppins;
+  font-size: 22.823px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--pink);
+}
+
 @media only screen and (max-width: 600px) {
   .footerContainer {
     height: 80vh;
